@@ -514,6 +514,6 @@ for j in b:
     d=[j[1][0],j[1][-1]]
     for o in range(int(c),0,-1):
         list[int(d[1])-1] += [list[int(d[0])-1][-o]]
-        list[int(d[0])-1] = list[int(d[0])-1][:-o]+list[int(d[0])-1][-o+1:]
+        list[int(d[0])-1] = list[int(d[0])-1][:-o]+(list[int(d[0])-1][-o+1:] if -o+1 < 0 else [])
 for k in list:
     print(k)
